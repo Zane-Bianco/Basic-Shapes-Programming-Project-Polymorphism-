@@ -1,15 +1,16 @@
 #include "Circle.h"
 #include <iostream>
-#include <numbers>
-#define PI 3.14159265358979323846
+#include <cmath>
 
 using namespace std;
 
-Circle::Circle(double x, double y, double r, string n = "Circle") {
-	BasicShape::setName(n);
-	calcArea(r);
+Circle::Circle(double x, double y, double r, string n):xCenter(x),yCenter(y), radius(r){
+	setName(n);
+	calcArea();
 }
 
-void Circle::calcArea(double r) {
-	BasicShape::setArea(((r * r) * PI));
+double Circle::calcArea() {
+	double area = (radius * radius) * 3.141592653589793238;
+	setArea(area);
+	return area;
 }

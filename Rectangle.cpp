@@ -3,12 +3,14 @@
 
 using namespace std;
 
-Rectangle::Rectangle(double l, double w, string n = "Rectangle") {
-	BasicShape::setName(n);
-	calcArea(l, w);
+Rectangle::Rectangle(double l, double w, string n):length(l), width(w) {
+	setName(n);
+	calcArea();
 
 } 
 
-void Rectangle::calcArea(double l, double w) {
-	BasicShape::setArea((l * w));
+double Rectangle::calcArea() {
+	double area = length * width;
+	setArea(area);
+	return area;
 }

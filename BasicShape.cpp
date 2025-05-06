@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 
+
+
 using namespace std;
 
 void BasicShape::setArea(double a){
@@ -9,9 +11,12 @@ void BasicShape::setArea(double a){
 		cout << "Area Invalid Setting default";
 		area = 5;
 	}
-	area = a;
+	else {
+		area = a;
+	}
+	
 }
 
-void BasicShape::setName(string n) {
+void BasicShape::setName(const string& n) {
 	name = n;
 }

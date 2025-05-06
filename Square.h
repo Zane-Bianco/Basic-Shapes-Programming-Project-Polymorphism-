@@ -13,6 +13,7 @@ private:
     double side;
 public:
     Square(double s, string n = "Square");
+    double getSide() const{ return side; };
 };
 
 #endif 

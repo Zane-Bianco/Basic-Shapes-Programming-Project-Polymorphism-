@@ -13,10 +13,11 @@ private:
 	string name;
 public:
 	void setArea(double a);
-	void setName(string n);
-	double getArea() { return area; };
-	string getName() { return name; };
+	void setName(const string& n);
+	double getArea()const { return area; };
+	string getName()const { return name; };
 	virtual double calcArea() = 0;
+	virtual ~BasicShape() {};
 };
 
 #endif

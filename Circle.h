@@ -12,7 +12,7 @@ private:
 	double xCenter, yCenter, radius;
 public:
 	Circle(double x, double y, double r, string n = "Circle"); // Constructor
-	void calcArea(double r);
+	double calcArea() override;
 	double getXcenter() { return xCenter; };
 	double getYcenter() { return yCenter; };
 	double getRadius() { return radius; };

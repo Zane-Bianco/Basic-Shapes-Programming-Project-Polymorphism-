@@ -14,7 +14,7 @@ private:
     double length, width;
 public:
     Rectangle(double l, double w, string n = "Rectangle"); //constructor
-    void calcArea(double l, double w);
+    double calcArea() override;
     double getLength() { return length; }
     double getWidth() { return width; };
 };
